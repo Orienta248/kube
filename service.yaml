@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "nginx"
+  namespace: nginx
+  labels:
+    app: nginx
+spec:
+  type: NodePort
+  selector:
+    name: "nginx"
+  ports:
+    - port: 80
+      nodePort: 30225
